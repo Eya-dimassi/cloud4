@@ -6,15 +6,20 @@ spring:
   config:
     import: "optional:configserver:http://localhost:9999/"
   datasource:
-    url: "jdbc:h2:mem:classdb"
-  h2:
-    console:
-      enabled: true
+    url: jdbc:mysql://mysqldb:3306/test?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+      # url: "jdbc:h2:mem:classdb"
+      # h2:
+      # console:
+    # enabled: true
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
   cloud:
+    config:
+      enabled: false
     discovery:
       enabled: true
 
@@ -33,3 +38,10 @@ eureka:
       defaultZone: "http://localhost:8761/eureka/"
   instance:
     prefer-ip-address: true
+
+build:
+  version: 1.0
+
+author:
+  name: "eya Dimassi"
+  email: "ayadimassi@yahoo.com"
