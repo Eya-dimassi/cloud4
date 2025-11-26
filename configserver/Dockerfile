@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jre
 LABEL "org.opencontainers.image.authors"="eya.com"
 
 # Copy the application JAR
-COPY target/classification-microservice-0.0.1-SNAPSHOT.jar classification-microservice-0.0.1-SNAPSHOT.jar
+COPY target/configserver-0.0.1-SNAPSHOT.jar configserver-0.0.1-SNAPSHOT.jar
 
 # Start the application
-ENTRYPOINT ["java", "-jar", "classification-microservice-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "configserver-0.0.1-SNAPSHOT.jar"]
